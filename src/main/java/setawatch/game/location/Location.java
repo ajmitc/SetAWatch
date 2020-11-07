@@ -19,7 +19,7 @@ public abstract class Location {
         this.firewoodChange = firewoodChange;
         this.lineSize = lineSize;
         this.finalLocation = false;
-        this.image = ImageUtil.get(imageFilename);
+        this.image = ImageUtil.get(imageFilename, 400);
     }
 
     public abstract void makeCamp(Game game);

@@ -2,7 +2,7 @@ package setawatch.game;
 
 import setawatch.game.creature.Creature;
 import setawatch.game.creature.CreatureDeck;
-import setawatch.game.hero.Hero;
+import setawatch.game.adventurer.Adventurer;
 import setawatch.game.location.Location;
 import setawatch.game.location.LocationDeck;
 
@@ -10,10 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Game {
-    private Phase phase;
-    private PhaseStep phaseStep;
+    private Phase phase = Phase.SETUP;
+    private PhaseStep phaseStep = PhaseStep.START_PHASE;
 
-    private List<Hero> heroes = new ArrayList<>();
+    private List<Adventurer> adventurers = new ArrayList<>();
     private List<Creature> line = new ArrayList<>();
     private CreatureDeck creatureDeck = new CreatureDeck();
     private List<Location> locations = new ArrayList<>();
@@ -56,7 +56,8 @@ public class Game {
 
         // Build locations
         for (int i = 0; i < 8; ++i){
-            locations.add(locationDeck.getNormalLocations().remove(0));
+            if (!locationDeck.getNormalLocations().isEmpty())
+                locations.add(locationDeck.getNormalLocations().remove(0));
         }
         locations.add(locationDeck.getFinalLocations().remove(0));
         locationDeck.formUnusedLocationDeck();
@@ -82,8 +83,8 @@ public class Game {
         this.phaseStep = phaseStep;
     }
 
-    public List<Hero> getHeroes() {
-        return heroes;
+    public List<Adventurer> getHeroes() {
+        return adventurers;
     }
 
     public List<Creature> getLine() {
@@ -112,6 +113,16 @@ public class Game {
 
     public void adjFirewood(int amount){
         this.firewood += amount;
+    }
+
+    public int getNumCreaturesToReveal(){
+        if (firewood >= 1 && firewood <= 6)
+            return 1;
+        if (firewood >= 7 && firewood <= 11)
+            return 2;
+        if (firewood >= 12)
+            return 3;
+        return 0;
     }
 
     public Location getCurrentLocation(){
@@ -184,5 +195,9 @@ public class Game {
 
     public void setFirewoodReductionWhenFirstPositionPowerActivated(int firewoodReductionWhenFirstPositionPowerActivated) {
         this.firewoodReductionWhenFirstPositionPowerActivated = firewoodReductionWhenFirstPositionPowerActivated;
+    }
+
+    public List<Creature> getHorde() {
+        return horde;
     }
 }

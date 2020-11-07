@@ -12,6 +12,38 @@ public class CreatureDeck {
     public CreatureDeck(){
         deck.add(new ForestGiant());
         deck.add(new ForestGiant2());
+        deck.add(new Bear());
+        deck.add(new Bear2());
+        deck.add(new Eagle());
+        deck.add(new Eagle2());
+        deck.add(new Wolf());
+        deck.add(new Wolf2());
+        deck.add(new Fae());
+        deck.add(new Fae2());
+        deck.add(new EmberDrake());
+        deck.add(new EmberDrake2());
+        deck.add(new Acolyte());
+        deck.add(new Acolyte2());
+        deck.add(new FellBeast());
+        deck.add(new FellBeast2());
+        deck.add(new Wyvern());
+        deck.add(new Wyvern2());
+        deck.add(new Goblins());
+        deck.add(new Goblins2());
+        deck.add(new Bandit());
+        deck.add(new Bandit2());
+        deck.add(new MetalGolem());
+        deck.add(new MetalGolem2());
+        deck.add(new Skeletons());
+        deck.add(new Skeletons2());
+        deck.add(new Vampire());
+        deck.add(new Vampire2());
+        deck.add(new ZombieHorde());
+        deck.add(new ZombieHorde2());
+        deck.add(new FireSerpent());
+        deck.add(new FireSerpent());
+
+        unhallowed.add(new Lich());
 
         Collections.shuffle(deck);
         Collections.shuffle(unhallowed);

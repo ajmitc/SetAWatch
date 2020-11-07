@@ -2,10 +2,10 @@ package setawatch.game.creature;
 
 import setawatch.game.Game;
 
-public class Acolyte extends Creature{
+public class Acolyte2 extends Creature{
 
-    public Acolyte(){
-        super("Acolyte", CreatureType.HUMAN, 1, 6, "Enemy (13).jpg");
+    public Acolyte2(){
+        super("Acolyte", CreatureType.HUMAN, 1, 7, "Enemy (14).jpg");
     }
 
     @Override

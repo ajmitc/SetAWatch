@@ -4,5 +4,14 @@ public enum CreatureType {
     SUMMON,
     ACOLYTE,
     UNHALLOWED,
-    GIANT
+    GIANT,
+    FOREST_CREATURE,
+    FAIRY,
+    DRAGON,
+    HUMAN,
+    FIRE_DEMON,
+    GOBLIN,
+    GOLEM,
+    UNDEAD,
+    FIRE_ELEMENTAL
 }

@@ -30,6 +30,8 @@ public abstract class Creature {
 
     public void onGoing(Game game){}
 
+    public void onFirstPosition(Game game){}
+
     public String getName() {
         return name;
     }
