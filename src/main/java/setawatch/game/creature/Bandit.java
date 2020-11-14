@@ -1,6 +1,8 @@
 package setawatch.game.creature;
 
 import setawatch.game.Game;
+import setawatch.game.PhaseStep;
+import setawatch.view.View;
 
 public class Bandit extends Creature{
 
@@ -9,8 +11,17 @@ public class Bandit extends Creature{
     }
 
     @Override
-    public void onFirstPosition(Game game) {
-        super.onFirstPosition(game);
-        // TODO bandit steals one available dice of the groups choosing
+    public void onFirstPosition(Game game, View view) {
+        super.onFirstPosition(game, view);
+        // bandit steals one available dice of the groups choosing
+        game.setPhaseStep(PhaseStep.WATCH_REVEAL_CREATURES_STEAL_DIE);
+    }
+
+    @Override
+    public void onDefeat(Game game, View view) {
+        super.onDefeat(game, view);
+        if (getStolenDice() != null){
+            setStolenDice(null);
+        }
     }
 }

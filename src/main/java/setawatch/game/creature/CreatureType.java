@@ -13,5 +13,7 @@ public enum CreatureType {
     GOBLIN,
     GOLEM,
     UNDEAD,
-    FIRE_ELEMENTAL
+    FIRE_ELEMENTAL,
+    SHADOW_ELEMENTAL,
+    EARTH_ELEMENTAL
 }

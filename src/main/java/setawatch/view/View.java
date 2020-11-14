@@ -45,8 +45,8 @@ public class View {
         gamePanel.refresh();
     }
 
-    public void init(){
-        gamePanel.init();
+    public void initGame(){
+        gamePanel.initGame();
     }
 
     public MainMenuPanel getMainMenuPanel() {

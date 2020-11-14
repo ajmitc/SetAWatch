@@ -6,6 +6,7 @@ import setawatch.view.ImageUtil;
 import java.awt.*;
 
 public abstract class Location {
+    public static final int CARD_WIDTH = 290;
     protected Image image;
     protected String name;
     protected boolean respite;
@@ -19,7 +20,7 @@ public abstract class Location {
         this.firewoodChange = firewoodChange;
         this.lineSize = lineSize;
         this.finalLocation = false;
-        this.image = ImageUtil.get(imageFilename, 400);
+        this.image = ImageUtil.get(imageFilename, CARD_WIDTH);
     }
 
     public abstract void makeCamp(Game game);

@@ -6,7 +6,7 @@ import setawatch.view.ImageUtil;
 import java.awt.*;
 
 public abstract class AdventurerAbility {
-    public static final int HERO_ABILITY_CARD_WIDTH = 200;
+    public static final int HERO_ABILITY_CARD_WIDTH = 105;
 
     protected String name;
     protected boolean passive;
